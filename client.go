@@ -9,6 +9,7 @@ import (
 	crclient "github.com/alibabacloud-go/cr-20181201/v2/client"
 	csclient "github.com/alibabacloud-go/cs-20151215/v3/client"
 	openapi "github.com/alibabacloud-go/darabonba-openapi/v2/client"
+	slsclient "github.com/alibabacloud-go/darabonba-openapi/v2/client"
 	mongoclient "github.com/alibabacloud-go/dds-20151201/v4/client"
 	dmsenterpriseclient "github.com/alibabacloud-go/dms-enterprise-20181101/client"
 	ecsclient "github.com/alibabacloud-go/ecs-20140526/v3/client"
@@ -143,4 +144,9 @@ func (c *Client) VPC(region string) (*vpcclient.Client, error) {
 // "github.com/alibabacloud-go/waf-openapi-20190910/v2/client"
 func (c *Client) WAF(region string) (*wafclient.Client, error) {
 	return wafclient.NewClient(c.CompleteConfig(region))
+}
+
+// "github.com/alibabacloud-go/darabonba-openapi/v2/client"
+func (c *Client) SLS(region string) (*slsclient.Client, error) {
+	return slsclient.NewClient(c.CompleteConfig(region))
 }
