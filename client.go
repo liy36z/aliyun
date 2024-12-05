@@ -146,7 +146,7 @@ func (c *Client) WAF(region string) (*wafclient.Client, error) {
 	return wafclient.NewClient(c.CompleteConfig(region))
 }
 
-// "github.com/alibabacloud-go/darabonba-openapi/v2/client"
+// "github.com/alibabacloud-go/sls-20201230/v6/client"
 func (c *Client) SLS(region string) (*slsclient.Client, error) {
 	return slsclient.NewClient(c.CompleteConfig(region))
 }
